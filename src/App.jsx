@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import styled from '@emotion/styled';
-import { Switch } from '@mui/material';
 import Navbar from './components/Navbar';
 
 function App() {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -26,19 +24,40 @@ function App() {
   return (
     <>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
-      <Parallax className='transition-colors duration-200' pages={3} ref={ref}>
-        <ParallaxLayer className='bg-slate-500 opacity-70' offset={0} speed={2.5}>
-          <p className='text-white'>Layers can contain anything</p>
-        </ParallaxLayer>
-
-        <ParallaxLayer className='bg-slate-700 opacity-70' sticky={{ start: 1, end: 2 }} />
+      <Parallax
+        className='transition-colors duration-0 scroll-smooth text-black dark:text-white bg-white dark:bg-gray-900'
+        pages={3}
+        ref={ref}
+      >
+        <ParallaxLayer className='bg-white dark:bg-gray-900' offset={0} speed={1} />
+        <ParallaxLayer className='bg-gray-100 dark:bg-gray-800' offset={1} speed={1} />
 
         <ParallaxLayer
-          className='bg-slate-800 dark:bg-blue-800 opacity-70 transition-colors duration-200'
-          offset={2}
-          speed={1}
-        ></ParallaxLayer>
+          id='Home'
+          className=''
+          offset={0}
+          speed={1.3}
+          onClick={() => ref.current.scrollTo(1)}
+        >
+          <div className='flex flex-col items-center justify-center h-full'>
+            <h1 className='text-6xl font-bold lexend'>Apresentação PCD-in</h1>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          className='z-10'
+          offset={1}
+          speed={2}
+          onClick={() => ref.current.scrollTo(2)}
+        >
+          <div className='flex flex-col items-center justify-center h-full'>
+            <h1 className='text-3xl font-bold lexend'>Acessibilidade desde a fonte</h1>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer id='last' className='transition-colors duration-200' offset={2} speed={1.5}>
+          <p>teste layer 3</p>
+        </ParallaxLayer>
       </Parallax>
     </>
   );
