@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Switch } from '@mui/material';
 import Logo from '../assets/pcdin.png';
+import P from '../assets/adaptive-icon.png';
 
 function Navbar({ darkMode, setDarkMode }) {
   const MaterialUISwitch = styled(Switch)(() => ({
@@ -52,10 +53,10 @@ function Navbar({ darkMode, setDarkMode }) {
   }));
 
   return (
-    <nav class='bg-white dark:bg-gray-800 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 transition-colors duration-300 lexend font-bold shadow-md'>
-      <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <a class='flex items-center'>
-          <img src={Logo} class='h-8 mr-3' alt='Flowbite Logo' />
+    <nav class='bg-neutral-100 dark:bg-neutral-900 fixed w-full z-20 top-0 left-0 border-b border-neutral-200 dark:border-neutral-600 transition-colors duration-300 lexend font-bold shadow-md'>
+      <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5 px-8'>
+        <a class='items-center transition-all'>
+          <img src={Logo} class='h-8 mr-3 w-6 sm:w-auto hover:w-auto object-left object-cover' alt='PCD-in Logo' />
         </a>
         <div class='flex md:order-2'>
           <MaterialUISwitch
@@ -68,7 +69,7 @@ function Navbar({ darkMode, setDarkMode }) {
           <button
             data-collapse-toggle='navbar-sticky'
             type='button'
-            class='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+            class='inline-flex items-center p-2 text-sm text-neutral-500 rounded-lg md:hidden hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:ring-neutral-600'
             aria-controls='navbar-sticky'
             aria-expanded='false'
           >
@@ -92,7 +93,7 @@ function Navbar({ darkMode, setDarkMode }) {
           class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
           id='navbar-sticky'
         >
-          <ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 '>
+          <ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-neutral-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 '>
             <li>
               <a
                 href='#Home'
@@ -105,7 +106,7 @@ function Navbar({ darkMode, setDarkMode }) {
             <li>
               <a
                 href='#'
-                class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+                class='block py-2 pl-3 pr-4 text-neutral-900 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-neutral-700'
               >
                 About
               </a>
@@ -113,7 +114,7 @@ function Navbar({ darkMode, setDarkMode }) {
             <li>
               <a
                 href='#'
-                class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+                class='block py-2 pl-3 pr-4 text-neutral-900 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-neutral-700'
               >
                 Services
               </a>
@@ -121,7 +122,7 @@ function Navbar({ darkMode, setDarkMode }) {
             <li>
               <a
                 href='#last'
-                class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+                class='block py-2 pl-3 pr-4 text-neutral-900 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-neutral-700'
               >
                 Contact
               </a>
