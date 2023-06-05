@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 
 function App() {
   const ref = useRef(null);

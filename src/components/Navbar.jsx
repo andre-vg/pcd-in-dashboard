@@ -121,10 +121,10 @@ function Navbar({ darkMode, setDarkMode }) {
             </li>
             <li>
               <a
-                href='#last'
+                href='/login'
                 class='block py-2 pl-3 pr-4 text-neutral-900 rounded hover:bg-neutral-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-neutral-700'
               >
-                Contact
+                Login
               </a>
             </li>
           </ul>
